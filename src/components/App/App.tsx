@@ -10,16 +10,16 @@ import './App.css';
 import ImageModal from '../ImageModal/ImageModal';
 
 export default function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchId, setSearchId] = useState('');
-  const [gallery, setGallery] = useState([]);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [searchId, setSearchId] = useState<string>('');
+  const [gallery, setGallery] = useState<any[]>([]);
   const [selectedImage, setSelectedImage] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isModalLoading, setIsModalLoading] = useState(false);
   const [error, setError] = useState(false);
   const [loadMore, setLoadMore] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number>(1);
   useEffect(() => {
     if (searchQuery === '') {
       return;
